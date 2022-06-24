@@ -1,4 +1,4 @@
-const demoData = {
+export const demoData = {
   recipes: [
     {
       vegetarian: true,
@@ -4625,4 +4625,175 @@ const demoData = {
   ],
 };
 
-export default demoData;
+export const italianCuisine = [
+  {
+    id: 715769,
+    title: "Broccolini Quinoa Pilaf",
+    image: "https://spoonacular.com/recipeImages/715769-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 715495,
+    title: "Turkey Tomato Cheese Pizza",
+    image: "https://spoonacular.com/recipeImages/715495-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 715573,
+    title: "Simple Skillet Lasagna",
+    image: "https://spoonacular.com/recipeImages/715573-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 659109,
+    title: "Salmon Quinoa Risotto",
+    image: "https://spoonacular.com/recipeImages/659109-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 648279,
+    title: "Italian Tuna Pasta",
+    image: "https://spoonacular.com/recipeImages/648279-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 648257,
+    title: "Italian Steamed Artichokes",
+    image: "https://spoonacular.com/recipeImages/648257-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 648247,
+    title: "Italian Seafood Stew",
+    image: "https://spoonacular.com/recipeImages/648247-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 640819,
+    title: "Crispy Italian Cauliflower Poppers Appetizer",
+    image: "https://spoonacular.com/recipeImages/640819-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 1095745,
+    title: "Mushroom Hummus Crostini",
+    image: "https://spoonacular.com/recipeImages/1095745-312x231.jpg",
+    imageType: "jpg",
+  },
+];
+
+export const thaiCuisine = [
+  {
+    id: 663157,
+    title: "Thai Street Vendor Salmon Skewers",
+    image: "https://spoonacular.com/recipeImages/663157-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 663126,
+    title: "Thai Pasta Salad",
+    image: "https://spoonacular.com/recipeImages/663126-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 663166,
+    title: "Thai Tofu With Bok Choy",
+    image: "https://spoonacular.com/recipeImages/663166-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 663113,
+    title: "Thai Green Mango Salad",
+    image: "https://spoonacular.com/recipeImages/663113-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 645541,
+    title: "Green Thai Curry with Beef",
+    image: "https://spoonacular.com/recipeImages/645541-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 641671,
+    title: "Drunken Noodles (Pad Kee Mao)",
+    image: "https://spoonacular.com/recipeImages/641671-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 663151,
+    title: "Thai Shrimp",
+    image: "https://spoonacular.com/recipeImages/663151-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 663108,
+    title: "Thai Fish Cakes",
+    image: "https://spoonacular.com/recipeImages/663108-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 645474,
+    title: "Green Mango Salad - Thai Side Dish",
+    image: "https://spoonacular.com/recipeImages/645474-312x231.jpg",
+    imageType: "jpg",
+  },
+];
+
+export const americanCuisine = [
+  {
+    id: 715594,
+    title: "Homemade Garlic and Basil French Fries",
+    image: "https://spoonacular.com/recipeImages/715594-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 715424,
+    title: "The Best Chili",
+    image: "https://spoonacular.com/recipeImages/715424-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 642540,
+    title: "Falafel Burgers",
+    image: "https://spoonacular.com/recipeImages/642540-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 646512,
+    title: "Salmon Caesar Salad",
+    image: "https://spoonacular.com/recipeImages/646512-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 1046982,
+    title: "How to Make the Perfect Sweet Potato Sloppy Joes",
+    image: "https://spoonacular.com/recipeImages/1046982-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 633837,
+    title: "Baked Sweet Potato Fries",
+    image: "https://spoonacular.com/recipeImages/633837-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 639392,
+    title: "Chunky Two-Bean Chili",
+    image: "https://spoonacular.com/recipeImages/639392-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 637897,
+    title: "Chicken and Chickpea Chili",
+    image: "https://spoonacular.com/recipeImages/637897-312x231.jpg",
+    imageType: "jpg",
+  },
+  {
+    id: 638552,
+    title: "Chili chops with cauliflower salad",
+    image: "https://spoonacular.com/recipeImages/638552-312x231.jpg",
+    imageType: "jpg",
+  },
+];
+
+export const japaneseCuisine = [];
