@@ -4,14 +4,16 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // --------- USE THIS LIKE SASS => use tags inside it ...
+// import { demoData } from "../util/DemoData";
+import { createSpoonacularUrl } from "../util/constraints";
+
+// Custom Styled Components
 import Wrapper from "./StyledComponents/Wrapper";
 import Gradient from "./StyledComponents/Gradient";
 import Card from "./StyledComponents/Card";
-import { demoData } from "../util/DemoData";
-import { createSpoonacularUrl } from "../util/constraints";
 
 function Veggie() {
-  const [veggieRecipes, setVeggieRecipes] = useState(demoData.recipes);
+  const [veggieRecipes, setVeggieRecipes] = useState([]);
 
   useEffect(() => {
     const SPOONACULAR_URL_VEGGIE = createSpoonacularUrl("random", {

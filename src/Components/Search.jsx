@@ -1,8 +1,10 @@
-import styled from "styled-components";
-import React, { useState, useEffect, useRef } from "react";
-import { FaSearch } from "react-icons/fa";
-import FormStyle from "./StyledComponents/FormStyle";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+// import { demoData } from "../util/DemoData";
+
+// Custom Styled Components
+import FormStyle from "./StyledComponents/FormStyle";
 
 function Search() {
   const [searchText, setSearchText] = useState("");

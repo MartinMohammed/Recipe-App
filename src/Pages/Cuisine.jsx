@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom"; // extract the dynamic param from the url
 import { createSpoonacularUrl } from "../util/constraints";
+
+// Custom Styled Components
 import Grid from "../Components/StyledComponents/Grid";
 import { Card2 } from "../Components/StyledComponents/Card";
 

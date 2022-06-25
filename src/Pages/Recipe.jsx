@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+// Custom Styled Components
 import Button from "../Components/StyledComponents/Button";
 import { DetailWrapper } from "../Components/StyledComponents/Wrapper";
 import Info from "../Components/StyledComponents/Info";

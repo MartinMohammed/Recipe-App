@@ -5,28 +5,25 @@ import { Link } from "react-router-dom";
   =>  build custom components by writing actual CSS 
   in your JS.
 */
-// --------- USE THIS LIKE SASS => use tags inside it ...
-
-import Wrapper from "./StyledComponents/Wrapper";
-import Gradient from "./StyledComponents/Gradient";
-import Card from "./StyledComponents/Card";
-
-import { demoData } from "../util/DemoData";
 import { createSpoonacularUrl } from "../util/constraints";
-
-// Splide = lightweight, flexible and accessible slider / carousel written in TS.
-// Splide = Carousel
-// SplideSlide will be the individual image/ card in the carousel
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // The styling for the Splide Carousel
 import "@splidejs/splide/dist/css/splide.min.css";
+/* Splide Carousel Component
+Splide = lightweight, flexible and accessible slider / carousel written in TS.
+Splide = Carousel
+SplideSlide will be the individual image/ card in the carousel
+*/
 
-// --------- COMPONENTS ---------
-// import RecipeCard from "./RecipeCard";
+// Custom Styled Components
+// --------- USE THIS LIKE SASS => use tags inside it ...
+import Wrapper from "./StyledComponents/Wrapper";
+import Gradient from "./StyledComponents/Gradient";
+import Card from "./StyledComponents/Card";
 
 function Popular() {
-  const [popularRecipes, setPopularRecipes] = useState(demoData.recipes);
+  const [popularRecipes, setPopularRecipes] = useState([]);
 
   useEffect(() => {
     const getPopular = async () => {
@@ -70,7 +67,7 @@ function Popular() {
     );
   });
 
-  const splideOptions = {
+  const splideCarouselOptions = {
     perPage: 4,
     arrows: false,
     // the dots on the bottom of the Splide
@@ -84,7 +81,9 @@ function Popular() {
       <Wrapper>
         <h3>Popular Picks</h3>
         {/* Carousel */}
-        <Splide options={splideOptions}>{renderPopularRecipesCards}</Splide>
+        <Splide options={splideCarouselOptions}>
+          {renderPopularRecipesCards}
+        </Splide>
       </Wrapper>
     </div>
   );

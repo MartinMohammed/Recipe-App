@@ -1,11 +1,8 @@
 import React from "react";
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
-import {
-  GiNoodles,
-  GiChopsticks,
-  GiFlexibleLamp,
-  GiFlexibleStar,
-} from "react-icons/gi";
+import { GiNoodles, GiChopsticks } from "react-icons/gi";
+
+// Custom Styled Components
 import List from "./StyledComponents/List";
 import SLink from "./StyledComponents/StyledNavLink";
 
@@ -27,7 +24,7 @@ function Category() {
       </SLink>
       <SLink to={`/cuisine/Chinese`}>
         <GiChopsticks />
-        <h4>Japanese</h4>
+        <h4>Chinese</h4>
       </SLink>
     </List>
   );
