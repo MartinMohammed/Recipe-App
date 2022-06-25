@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 /* Styled-Components - CSS-IN-JS 
   Popular libarary that is used to style React Applications.
   =>  build custom components by writing actual CSS 
@@ -59,9 +60,11 @@ function Popular() {
       // Individual Carousel Item
       <SplideSlide key={recipe.id}>
         <Card>
-          <p>{recipe.title}</p>
-          <img src={recipe.image} alt={recipe.title}></img>
-          <Gradient />
+          <Link to={`/recipe/${recipe.id}`}>
+            <p>{recipe.title}</p>
+            <img src={recipe.image} alt={recipe.title}></img>
+            <Gradient />
+          </Link>
         </Card>
       </SplideSlide>
     );

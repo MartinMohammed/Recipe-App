@@ -2,7 +2,8 @@
 export const REACT_APP_SPOONACULAR_API_KEY =
   process.env.REACT_APP_SPOONACULAR_API_KEY;
 
-export function createSpoonacularUrl(type, CONFIG) {
+// set default value
+export function createSpoonacularUrl(type = "random", CONFIG) {
   const baseUrl = "https://api.spoonacular.com/recipes/";
   const apiKey = `?apiKey=${REACT_APP_SPOONACULAR_API_KEY}`;
   const number = CONFIG?.number ? `&number=${CONFIG?.number}` : "";

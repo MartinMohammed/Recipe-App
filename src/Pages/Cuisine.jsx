@@ -10,12 +10,12 @@ import { Card2 } from "../Components/StyledComponents/Card";
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
   let params = useParams(); // {object format - key values}
-  const SPOONACULAR_URL_CUISINE = createSpoonacularUrl("complexSearch", {
-    number: 9,
-    cuisine: params.type,
-  });
 
   useEffect(() => {
+    const SPOONACULAR_URL_CUISINE = createSpoonacularUrl("complexSearch", {
+      number: 9,
+      cuisine: params.type,
+    });
     const getCuisine = async () => {
       const check = localStorage.getItem(params.type);
       if (check) {
@@ -25,6 +25,7 @@ function Cuisine() {
         const data = await response.json();
         localStorage.setItem(params.type, JSON.stringify(data.results));
         setCuisine(data.results);
+        console.log(data);
       }
     };
 
@@ -34,15 +35,24 @@ function Cuisine() {
   const renderCusineList = cuisine.map((recipe) => {
     return (
       <Card2 key={recipe.id}>
-        <img src={recipe.image} alt={recipe.title}></img>
-        <h4>{recipe.title}</h4>
+        <Link to={`/recipe/${recipe.id}`}>
+          <img src={recipe.image} alt={recipe.title}></img>
+          <h4>{recipe.title}</h4>
+        </Link>
       </Card2>
     );
   });
 
   return (
     <div>
-      <Grid>{renderCusineList}</Grid>
+      <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {renderCusineList}
+      </Grid>
     </div>
   );
 }

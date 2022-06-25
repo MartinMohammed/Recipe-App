@@ -29,6 +29,7 @@ const SLink = styled(NavLink)`
   /* svg:active{} => the same - & shows that we want to apply
     style for the component before */
 
+  /* This class is added by react-router-dom when the current Link was clicked */
   &.active {
     background: linear-gradient(to right, #f27121, #e94057);
 

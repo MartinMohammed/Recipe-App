@@ -1,6 +1,7 @@
 import React from "react";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // --------- USE THIS LIKE SASS => use tags inside it ...
 import Wrapper from "./StyledComponents/Wrapper";
@@ -44,9 +45,11 @@ function Veggie() {
       // Individual Carousel Item
       <SplideSlide key={recipe.id}>
         <Card>
-          <p>{recipe.title}</p>
-          <img src={recipe.image} alt={recipe.title}></img>
-          <Gradient />
+          <Link to={`/recipe/${recipe.id}`}>
+            <p>{recipe.title}</p>
+            <img src={recipe.image} alt={recipe.title}></img>
+            <Gradient />
+          </Link>
         </Card>
       </SplideSlide>
     );

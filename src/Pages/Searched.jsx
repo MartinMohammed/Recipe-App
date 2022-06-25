@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { createSpoonacularUrl } from "../util/constraints";
+import Grid from "../Components/StyledComponents/Grid";
+import { Card2 } from "../Components/StyledComponents/Card";
+import { Link } from "react-router-dom";
 
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -36,8 +39,20 @@ function Searched() {
       }
     };
     doSearch();
-  }, []);
-  return <div>{searchTerm}</div>;
+  }, [searchTerm]);
+
+  const renderSearchedRecipes = searchedRecipes.map((searchedRecipe) => {
+    const { title, id, image } = searchedRecipe;
+    return (
+      <Card2 key={id}>
+        <Link to={`/recipe/${searchedRecipe.id}`}>
+          <img src={image} alt={title}></img>
+          <h4>{title}</h4>
+        </Link>
+      </Card2>
+    );
+  });
+  return <Grid>{renderSearchedRecipes}</Grid>;
 }
 
 export default Searched;
